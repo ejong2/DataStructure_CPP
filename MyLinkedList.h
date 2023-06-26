@@ -1,22 +1,10 @@
 #pragma once
 #include <iostream>
-/*---------------------
-    Node 클래스
-----------------------*/
-
-class Node
-{
-public:
-    int value;
-    Node* next;
-
-    Node(int value, Node* next = nullptr) : value(value), next(next) {}
-};
+#include "Node.h"
 
 /*---------------------
     LinkedList 클래스
 ----------------------*/
-
 class MyLinkedList
 {
 private:
