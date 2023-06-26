@@ -2,6 +2,7 @@
 
 #include "MyArray.h"
 #include "MyLinkedList.h"
+#include "MyStack.h"
 
 using namespace std;
 
@@ -9,16 +10,17 @@ const int MAX = 5;
 
 void StartMyArray();
 void StartMyLinkedList();
+void StartMyStack();
 
 int main()
 {
     //StartMyArray();
-    StartMyLinkedList();
+    //StartMyLinkedList();
+    StartMyStack();
 
     return 0;
 }
 
- 
 /*---------------------
      MyArray Start
 ----------------------*/
@@ -32,6 +34,9 @@ void StartMyArray()
     arr.print();
 }
 
+/*--------------------------
+     MyLinkedList Start
+---------------------------*/
 void StartMyLinkedList()
 {
     MyLinkedList list;
@@ -54,3 +59,34 @@ void StartMyLinkedList()
     std::cout << "List contains 2: " << (list.contains(2) ? "Yes" : "No") << "\n";
     std::cout << "List size: " << list.getSize() << "\n";
 }
+
+/*---------------------
+      Stack Start
+----------------------*/
+void StartMyStack()
+{
+    MyStack stack;
+    for (int i = 0; i < MAX; i++)
+    {
+        stack.push(i + 1);
+    }
+    stack.print();
+
+    std::cout << "Stack size: " << stack.getSize() << "\n";
+    std::cout << "Stack top: " << stack.peek() << "\n";
+
+    if (stack.pop())
+    {
+        std::cout << "Popped from stack. \n";
+        stack.print();
+    }
+    else
+    {
+        std::cout << "Stack is empty. \n";
+    }
+}
+
+
+
+
+
